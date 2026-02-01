@@ -116,7 +116,6 @@ const EditPage = () => {
           placeholder="Write At List Tow Character .."
           className=" outline-none placeholder-secondary w-full bg-text/30 text-primary border mb-10 p-2"
         ></textarea>
-
         <div className="mb-10">
           <label
             htmlFor="img"
@@ -128,10 +127,11 @@ const EditPage = () => {
             id="img"
             type="file"
             accept="image/*"
-            onChange={(e) => setCoverImage(e.target.files?.[0]) || null}
+            onChange={(e) => setCoverImage(e.target.files?.[0] || null)}
             className="hidden w-full text-sm"
           />
         </div>
+
         <div className="mb-10">
           {priveImage && (
             <Image
