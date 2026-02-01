@@ -82,9 +82,9 @@ const EditPage = () => {
       } catch (error) {
         if (axios.isAxiosError(error)) {
           console.log(error.response?.data);
-          alert("fail to load blog" || error.response?.data?.error);
+          alert(error.response?.data?.error || "fail to load blog"); // ✅
         } else {
-          alert("Un expicted error");
+          alert("Unexpected error");
         }
       } finally {
         setLoading(false);

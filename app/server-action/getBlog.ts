@@ -12,13 +12,14 @@ export async function getBlog(slug: string) {
       title: true,
       slug: true,
       excerpt: true,
+       content: true,
       coverImageUrl: true,
       createdAt:true,
       author: {
         select: {
           id: true,
           image: true,
-          email: true,
+          name: true,
         },
       },
     },
